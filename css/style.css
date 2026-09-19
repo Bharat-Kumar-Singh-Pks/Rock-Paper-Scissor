@@ -1,226 +1,215 @@
-  * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-      background: linear-gradient(
-        135deg,
-        #667eea,
-        #764ba2
-      );
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
 
-      color: #222;
-    }
+  color: #222;
+}
 
-    /* Main game container */
-    .game-container {
-      width: 90%;
-      max-width: 650px;
+/* Main game container */
+.game-container {
+  width: 90%;
+  max-width: 650px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  text-align: center;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
 
-      padding: 35px;
+/* Heading */
+h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #333;
+}
 
-      background: rgba(255, 255, 255, 0.95);
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
 
-      border-radius: 25px;
+/* Choices */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
 
-      box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
 
-      text-align: center;
-    }
+.choice {
+  width: 130px;
+  height: 130px;
 
-    /* Heading */
-    h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
+  border: none;
+  border-radius: 50%;
 
-      color: #333;
-    }
+  background: #f5f5f5;
+  cursor: pointer;
 
-    .subtitle {
-      color: #777;
-      margin-bottom: 30px;
-      font-size: 17px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* Choices */
-    .choices {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
 
-      margin-bottom: 30px;
-    }
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
 
-    .choice {
-      width: 130px;
-      height: 130px;
+.choice:hover {
+  transform: translateY(-8px) scale(1.05);
 
-      border: none;
-      border-radius: 50%;
+  background: #ffffff;
 
-      background: #f5f5f5;
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.25);
+}
 
-      cursor: pointer;
+.choice:active {
+  transform: scale(0.95);
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.bi {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
 
-      box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.15);
+/* Decision */
+.decision-box {
+  margin-top: 20px;
+  padding: 18px;
 
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
-    }
+  background: #f7f7f7;
 
-    .choice:hover {
-      transform: translateY(-8px) scale(1.05);
+  border-radius: 15px;
 
-      background: #ffffff;
+  font-size: 17px;
+}
 
-      box-shadow:
-        0 15px 30px rgba(0, 0, 0, 0.25);
-    }
+.paraDecision {
+  margin: 0;
+  font-weight: bold;
+  color: #444;
+}
 
-    .choice:active {
-      transform: scale(0.95);
-    }
+/* Result */
+.result {
+  margin: 20px 0;
 
-    .bi {
-      width: 75px;
-      height: 75px;
-      object-fit: contain;
-    }
+  font-size: 30px;
+  font-weight: bold;
 
-    /* Decision */
-    .decision-box {
-      margin-top: 20px;
-      padding: 18px;
+  min-height: 40px;
+}
 
-      background: #f7f7f7;
+/* Score */
+.score-card {
+  margin-top: 20px;
 
-      border-radius: 15px;
+  padding: 20px;
 
-      font-size: 17px;
-    }
+  border-radius: 18px;
 
-    .paraDecision {
-      margin: 0;
-      font-weight: bold;
-      color: #444;
-    }
+  background: linear-gradient(
+    135deg,
+    #fdfbfb,
+    #ebedee
+  );
 
-    /* Result */
-    .result {
-      margin: 20px 0;
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
 
-      font-size: 30px;
-      font-weight: bold;
+.score-title {
+  font-size: 18px;
+  font-weight: bold;
 
-      min-height: 40px;
-    }
+  margin-bottom: 12px;
+}
 
-    /* Score */
-    .score-card {
-      margin-top: 20px;
+.paraScore {
+  font-size: 20px;
+  font-weight: bold;
 
-      padding: 20px;
+  color: #333;
+}
 
-      border-radius: 18px;
+/* Reset button */
+.reset {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
 
-      background: linear-gradient(
-        135deg,
-        #fdfbfb,
-        #ebedee
-      );
+  background: #ff5f6d;
+  color: white;
 
-      box-shadow:
-        inset 0 0 10px rgba(0, 0, 0, 0.05);
-    }
+  font-size: 16px;
+  font-weight: bold;
 
-    .score-title {
-      font-size: 18px;
-      font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+}
 
-      margin-bottom: 12px;
-    }
+.reset:hover {
+  background: #e74c5b;
+  transform: scale(1.05);
+}
 
-    .paraScore {
-      font-size: 20px;
-      font-weight: bold;
+.reset:active {
+  transform: scale(0.95);
+}
 
-      color: #333;
-    }
+/* Mobile */
+@media (max-width: 600px) {
 
-    /* Reset button */
-    .reset {
-      margin-top: 25px;
+  .game-container {
+    padding: 25px 15px;
+  }
 
-      padding: 12px 25px;
+  h1 {
+    font-size: 30px;
+  }
 
-      border: none;
-      border-radius: 30px;
+  .choices {
+    gap: 12px;
+  }
 
-      background: #ff5f6d;
-      color: white;
+  .choice {
+    width: 95px;
+    height: 95px;
+  }
 
-      font-size: 16px;
-      font-weight: bold;
+  .bi {
+    width: 55px;
+    height: 55px;
+  }
 
-      cursor: pointer;
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .reset:hover {
-      background: #e74c5b;
-      transform: scale(1.05);
-    }
-
-    .reset:active {
-      transform: scale(0.95);
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-
-      .game-container {
-        padding: 25px 15px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      .choices {
-        gap: 12px;
-      }
-
-      .choice {
-        width: 95px;
-        height: 95px;
-      }
-
-      .bi {
-        width: 55px;
-        height: 55px;
-      }
-
-      .paraScore {
-        font-size: 16px;
-      }
-    }
+  .paraScore {
+    font-size: 16px;
+  }
+}
