@@ -1,15 +1,13 @@
-  .r{
+ .r{
     cursor: pointer;
-    background-color:darkslategray;
     font-weight: bold;
     padding: 10px;
     border: 2px solid black;
     border-radius: 80px;
   }
-  
+
   .p{
     cursor: pointer;
-    background-color:honeydew;
     font-weight: bold;
     padding: 10px;
     border:  2px solid black;
@@ -17,20 +15,14 @@
   }
   .s{
     cursor: pointer;
-    background-color:silver;
     font-weight: bold;
     padding: 10px;
     border: 2px solid black;
     border-radius: 80px;
   }
-  .rpsWin{
-    background-color: green;
-  }
-  .rpsLose{
-    background-color: red;
-  }
-  .rpsTie{
-    background-color: Silver;
+  .bi{
+    width : 50px;
+    height: 50px;
   }
   
   .reset{
