@@ -5,20 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Rock Paper Scissors</title>
-
   <link rel="stylesheet" href="css/style.css ">
 
 </head>
-
-
 <body>
-
+  
   <div class="game-container">
-
     <h1>Rock Paper Scissors</h1>
-
     <p class="subtitle">Choose any one</p>
-
 
     <div class="choices">
       <!-- Rock button -->
@@ -28,7 +22,6 @@
         "><img class="bi" src="img/rock.png" alt="Rock">
       </button>
 
-
       <!-- Paper button -->
       <button class="choice" onclick=" 
         playerMove = 'Paper';
@@ -36,16 +29,13 @@
         "><img class="bi" src="img/paper.png" alt="Paper">
       </button>
 
-
       <!-- Scissor button -->
       <button class="choice" onclick="
           playerMove = 'Scissor';
           calculateMoves(playerMove);
         "><img class="bi" src="img/scissor.png" alt="Scissor">
       </button>
-
     </div>
-
 
     <div class="decision-box">
       <p class="paraDecision">
@@ -55,19 +45,16 @@
 
     <p class="result"></p>
 
-
     <div class="score-card">
       <p class="score-title">Score</p>
       <p class="paraScore">Win : 0 | Lose : 0 | Tie : 0</p>
     </div>
 
-
+    <!-- Reset -->
     <button class="reset" onclick="resetMoves();">
       Reset
     </button>
-
   </div>
-
 
   <script src="js/script.js">
   </script>
