@@ -3,31 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissor...</title>
+  <title>Function continue...</title>
 </head>
-<link rel="stylesheet" href="css/style.css">
+
+<style>
+  .r{
+    cursor: pointer;
+    background-color:darkslategray;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 80px;
+  }
+  
+  .p{
+    cursor: pointer;
+    background-color:honeydew;
+    font-weight: bold;
+    padding: 10px;
+    border:  2px solid black;
+    border-radius: 80px;
+  }
+  .s{
+    cursor: pointer;
+    background-color:silver;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 80px;
+  }
+  .rpsWin{
+    background-color: green;
+  }
+  .rpsLose{
+    background-color: red;
+  }
+  .rpsTie{
+    background-color: Silver;
+  }
+  
+  .reset{
+    background-color:thistle;
+    padding: 5px 10px;
+    border:  none;
+    border-radius: 15px;
+  }
+
+</style>
 
 <body>
-  <h2>Rock Paper Scissor</h2>
-  <h4>Choose Any One..</h4>
+  <h4>This is heading 10..</h4>
+  <h5>Choose any one..</h5>
 
 <!-- rock button -->
   <button class="r" onclick="    
     let playerMove='Rock';
     calculateMoves(playerMove);
-    "><img class="bi" src="img/rock.png"></button>
+    ">Rock</button>
 
 <!-- paper button -->
   <button class="p" onclick="
     playerMove='Paper';
     calculateMoves(playerMove);
-    "><img class="bi" src="img/paper.png"></button>
+    ">Paper</button>
 
 <!-- scissor button -->
-  <button class="s" onclick="
+<button class="s" onclick="
     playerMove='Scissor';
     calculateMoves(playerMove);
-    "><img class="bi" src="img/scissor.png"></button><br><br>
+    ">Scissor</button><br><br>
 
 <p class="paraDecision"></p>
 <p class="result"></p>
@@ -40,7 +84,8 @@
 
 </body>
 
+<script >
 
-  <script src="js/script.js">
+
 </script>
 </html>
