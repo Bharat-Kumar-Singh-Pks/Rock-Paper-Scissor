@@ -1,3 +1,4 @@
+
 //converting the ls stringed value to object using json
   let scoreBoard=JSON.parse(localStorage.getItem("scoreBoard")) ||
   {
