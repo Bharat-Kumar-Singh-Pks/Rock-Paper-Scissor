@@ -1,0 +1,41 @@
+  .r{
+    cursor: pointer;
+    background-color:darkslategray;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 80px;
+  }
+  
+  .p{
+    cursor: pointer;
+    background-color:honeydew;
+    font-weight: bold;
+    padding: 10px;
+    border:  2px solid black;
+    border-radius: 80px;
+  }
+  .s{
+    cursor: pointer;
+    background-color:silver;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 80px;
+  }
+  .rpsWin{
+    background-color: green;
+  }
+  .rpsLose{
+    background-color: red;
+  }
+  .rpsTie{
+    background-color: Silver;
+  }
+  
+  .reset{
+    background-color:thistle;
+    padding: 5px 10px;
+    border:  none;
+    border-radius: 15px;
+  }
